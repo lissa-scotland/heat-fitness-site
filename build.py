@@ -12,7 +12,7 @@ PHONE = "07718 339510"; STUDIO = "01786 473694"
 PHONE_A = f'<a href="tel:07718339510">{PHONE}</a>'
 # Six-week cycles. Change these when Helen confirms dates.
 CYCLE_NOW = "the week of 9 November"
-CYCLE_NEXT = "January 2027"
+CYCLE_NEXT = "the week of 11 January 2027"
 ADDR = "Unit 22, 15 Borrowmeadow Road, Stirling"
 POSTCODE = "FK7 7FB"
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
@@ -115,7 +115,7 @@ SCALE = f'''<div class="scale">
 def six_band(href="six-week-start.html#groups", label="See the groups and how it works"):
     return f'''<section class="section"><div class="wrap"><div class="band"><div class="band-inner">
   <div class="stack"><span class="kicker">Next cycle starts {CYCLE_NOW}</span><h2 class="display">The six-week groups</h2>
-  <p>Six weeks, two sessions a week, in a small group of people starting at the same point as you. One session downstairs in the gym and one upstairs in the studio. The groups run in six-week cycles all year: the next runs from {CYCLE_NOW} up to Christmas, and the one after that starts in {CYCLE_NEXT} {TBC("date")}.</p>
+  <p>Six weeks, two sessions a week, in a small group of people starting at the same point as you. One session downstairs in the gym and one upstairs in the studio. The groups run in six-week cycles all year: the next runs from {CYCLE_NOW} up to Christmas, and the one after that starts {CYCLE_NEXT}.</p>
   <div class="cta-row"><a class="btn" href="{href}">{label}</a></div></div>
   <div class="price-tag"><span class="big">£50</span><span>for six weeks, about £4 a session</span>
   <ul><li>Sign-up only, so the group stays the same</li><li>Carry on into the next cycle, or move into any regular class</li><li>15% off your first membership or class pack afterwards</li></ul></div>
@@ -179,7 +179,7 @@ P["six-week-start.html"] = ("Six-week groups for beginners in Stirling | Heat Fi
   <details><summary>What if I miss a session?</summary><p>Life happens. Let Helen know and she'll help you catch up. {TBC("catch-up policy")}</p></details>
   <details><summary>Can I just try one class first?</summary><p>Yes. If the six weeks aren't for you, bring our leaflet and your first class is free.</p></details>
   <details><summary>What happens after six weeks?</summary><p>The groups run in cycles, so you can carry straight on into the next six weeks with your group. Or you can move into any of our regular classes, with 15% off your first membership or class pack. Two weeks before the end, Helen will chat to you about what suits you best.</p></details>
-  <details><summary>When does the next cycle start?</summary><p>The next cycle starts {CYCLE_NOW} and runs up to Christmas. The one after that starts in {CYCLE_NEXT} {TBC("date")}. If you can't make this one, save your place for the next.</p></details>
+  <details><summary>When does the next cycle start?</summary><p>The next cycle starts {CYCLE_NOW} and runs up to Christmas. The one after that starts {CYCLE_NEXT}. If you can't make this one, save your place for the next.</p></details>
 </div></div></section>
 <section class="section" id="signup"><div class="wrap split" style="align-items:start">
   <div class="stack"><span class="kicker">Save your place</span><h2 class="display" style="font-size:1.8rem">Sign up for a group</h2>
@@ -191,7 +191,7 @@ P["six-week-start.html"] = ("Six-week groups for beginners in Stirling | Heat Fi
     <label for="sw-group">Which group?<select id="sw-group" name="group" required>
       <option value="">Choose a group</option>{"".join(f'<option value="{g[0]}">{g[0]} ({g[1][0].lower() + g[1][1:]})</option>' for g in FEATURED)}
       <option value="Not sure yet">I'm not sure yet, help me choose</option></select></label>
-    <label for="sw-cycle">Which cycle?<select id="sw-cycle" name="cycle"><option>Starting {CYCLE_NOW}</option><option>The next one, in {CYCLE_NEXT}</option></select></label>
+    <label for="sw-cycle">Which cycle?<select id="sw-cycle" name="cycle"><option>Starting {CYCLE_NOW}</option><option>The next one, starting {CYCLE_NEXT}</option></select></label>
     <label for="sw-name">Your name<input id="sw-name" name="name" autocomplete="name" required></label>
     <label for="sw-contact">Phone number or email<input id="sw-contact" name="contact" autocomplete="tel" required></label>
     <label for="sw-msg">Anything Helen should know? (optional)<textarea id="sw-msg" name="message" rows="3"></textarea></label>

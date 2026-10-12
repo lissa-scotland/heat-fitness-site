@@ -131,7 +131,7 @@ def build(P, temp, TBC, UNDERLINE, PHONE, CYCLE_NOW, CYCLE_NEXT):
 </div></section>
 <section class="section"><div class="wrap split" style="align-items:start">
   <div class="stack"><h2 class="display" style="font-size:1.8rem">Is this for you?</h2><ul class="ticks">{who}</ul></div>
-  <div class="card"><h3>A six-week group</h3><p>{g["name"]} is one of our six-week groups. It meets twice a week, once downstairs in the gym and once upstairs in the studio, with {s["size"].lower()} people so Helen gets to know everyone. It runs in six-week cycles all year: the next starts {starts}, and the one after that in {CYCLE_NEXT} {TBC("date")}. When your six weeks are up, you can carry on into the next cycle or move into any class on our <a href="classes.html">regular timetable</a>.</p>
+  <div class="card"><h3>A six-week group</h3><p>{g["name"]} is one of our six-week groups. It meets twice a week, once downstairs in the gym and once upstairs in the studio, with {s["size"].lower()} people so Helen gets to know everyone. It runs in six-week cycles all year: the next starts {starts}, and the one after that in {CYCLE_NEXT}. When your six weeks are up, you can carry on into the next cycle or move into any class on our <a href="classes.html">regular timetable</a>.</p>
   <div class="meta"><span><b>{g["when"]}</b>{"" if st else ", times " + TBC()}</span><span><b>£50</b> for six weeks</span></div>
   <span data-places="{g["name"]}" hidden></span>
   <div class="cta-row"><a class="btn" href="{signup}">Save your place</a></div></div>
