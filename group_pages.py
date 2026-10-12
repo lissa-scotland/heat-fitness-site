@@ -11,6 +11,7 @@ START = {
     "Strong and Calm": ("Tuesday 10 November", "Thursday 17 December"),
     "The Unstiffening": ("Tuesday 10 November", "Thursday 17 December"),
     "Steady and Strong": ("Monday 9 November", "Wednesday 16 December"),
+    "The Quiet Hour": ("Monday 9 November", "Wednesday 16 December"),
 }
 
 GROUPS = [
@@ -50,7 +51,7 @@ GROUPS = [
   faqs=[("Will it help my back pain?", "Lots of people find that moving more and getting stronger eases everyday stiffness. If you have pain that's new, severe or getting worse, see your GP or a physio first."),
         ("Is it hot?", "The gym session is unheated. The stretch upstairs is warm, about 28°C, which helps your muscles relax. It isn't hot yoga."),
         ("Who comes along?", "Mostly people who sit at a desk or drive all day, men and women alike.")]),
- dict(name="The Quiet Hour", when="Evenings", slug="yoga-for-anxiety-stress-stirling.html", photo=("studio-candles.jpg", "The yoga studio with low lights and candles"),
+ dict(name="The Quiet Hour", when="Mondays at 7:30pm and Wednesdays at 8pm", slug="yoga-for-anxiety-stress-stirling.html", photo=("studio-candles.jpg", "The yoga studio with low lights and candles"),
   title="Gentle yoga and exercise for anxiety, low mood and stress in Stirling | The Quiet Hour",
   desc="A calm, predictable class in Stirling for anyone living with anxiety, low mood or stress. The same gentle routine each week, low lights and a small group.",
   kicker="Six-week group for anxiety, low mood or stress", h1a="Calm,", h1b="and the same every week.",

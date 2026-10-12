@@ -34,7 +34,7 @@ G = [
   down=dict(day="Monday", short="Mon", time="7:30pm", length="45 minutes", temp="Unheated", kind="Gentle strength", tilekind="Strength",
    steps=[(5,"Arrive and plan","Helen explains the same plan as every week"),(8,"Warm-up","Slow, simple movement"),
           (22,"Simple circuit","The same five moves, at your own pace"),(7,"Slow stretch","Easing out"),(3,"Breathe","Settling before heading home")]),
-  up=dict(day="Wednesday", short="Wed", time="7:30pm", length="60 minutes", temp="Unheated", kind="Gentle yoga",
+  up=dict(day="Wednesday", short="Wed", time="8pm", length="60 minutes", temp="Unheated", kind="Gentle yoga",
    steps=[(7,"Arrive and plan","Low lights, tea, and the plan for tonight"),(10,"Grounding","Simple breathing and slow movement"),
           (23,"Slow flow","The same gentle sequence each week"),(15,"Supported stretches","Long holds, inspired by Yin"),(5,"Rest","Eyes open if you prefer")])),
  dict(name="Next Steps", group="Getting back on their feet", label="For anyone who has finished physio", size="Up to 4",
