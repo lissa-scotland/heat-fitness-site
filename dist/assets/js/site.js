@@ -39,16 +39,16 @@ var HEAT = {
   // The timetable for the featured classes. Leave time as "" until it's confirmed and the page shows "to confirm".
   // floor: "down" (the gym) or "up" (the studio). heat: "unheated", "warm" or "hot".
   timetable: [
-    { day: "Tuesday",   time: "",       name: "Steady and Strong", floor: "down", heat: "unheated" },
-    { day: "",          time: "",       name: "Steady and Strong", floor: "up",   heat: "unheated" },
-    { day: "",          time: "",       name: "The Unstiffening",  floor: "down", heat: "unheated" },
-    { day: "",          time: "",       name: "The Unstiffening",  floor: "up",   heat: "warm" },
+    { day: "Monday",     time: "10am",     name: "Steady and Strong",  floor: "down", heat: "unheated" },
+    { day: "Wednesday",  time: "10am",     name: "Steady and Strong",  floor: "up",   heat: "unheated" },
+    { day: "Tuesday",    time: "12:15pm",  name: "The Unstiffening",   floor: "down", heat: "unheated" },
+    { day: "Thursday",   time: "12:15pm",  name: "The Unstiffening",   floor: "up",   heat: "warm" },
     { day: "",          time: "",       name: "The Quiet Hour",    floor: "down", heat: "unheated" },
     { day: "Wednesday", time: "",       name: "The Quiet Hour",    floor: "up",   heat: "unheated" },
     { day: "",          time: "",       name: "Strong Bones",      floor: "down", heat: "unheated" },
     { day: "",          time: "",       name: "Strong Bones",      floor: "up",   heat: "unheated" },
-    { day: "",          time: "",       name: "Strong and Calm",   floor: "down", heat: "unheated" },
-    { day: "",          time: "",       name: "Strong and Calm",   floor: "up",   heat: "unheated" }
+    { day: "Tuesday",    time: "9:45am",   name: "Strong and Calm",    floor: "down", heat: "unheated" },
+    { day: "Thursday",   time: "9:45am",   name: "Strong and Calm",    floor: "up",   heat: "unheated" }
   ]
 };
 

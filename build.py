@@ -11,7 +11,7 @@ TBC = lambda s="to confirm": f'<span class="tbc">{s}</span>'
 PHONE = "07718 339510"; STUDIO = "01786 473694"
 PHONE_A = f'<a href="tel:07718339510">{PHONE}</a>'
 # Six-week cycles. Change these when Helen confirms dates.
-CYCLE_NOW = "the week of 16 November"
+CYCLE_NOW = "the week of 9 November"
 CYCLE_NEXT = "January 2027"
 ADDR = "Unit 22, 15 Borrowmeadow Road, Stirling"
 POSTCODE = "FK7 7FB"
@@ -91,7 +91,7 @@ def featured_cards():
         t = temp("Unheated", "unheated") if heat == "unheated" else temp("Upstairs warm, about 28°C", "warm")
         out += f'''<article class="card"><span class="for">{forw}</span><h3><a href="{GP.link_for(name)}">{name}</a></h3>
 <p class="hand" style="font-size:1.45rem">{head}</p><p>{body}</p>
-<div class="meta"><span><b>Twice a week</b>, downstairs and upstairs</span>{t}<span>{GP.when(name)}, times {TBC()}</span></div>
+<div class="meta"><span><b>Twice a week</b>, downstairs and upstairs</span>{t}<span>{GP.when(name)}{", from " + GP.START[name][0] if name in GP.START else ", times " + TBC()}</span></div>
 <span data-places="{name}" hidden></span><a class="card-link" href="{GP.link_for(name)}">Find out more about {name}</a></article>'''
     out += f'''<article class="card running"><span class="for">Women over 40 · running now</span><h3>Women's Strength</h3>
 <p class="hand" style="font-size:1.45rem">Strong through the change.</p><p>Our small women's-only strength group is already up and running, and some of the women have been coming for over two years. More weights than cardio, for women through perimenopause and menopause. Booked a month at a time, and there's usually space.</p>
