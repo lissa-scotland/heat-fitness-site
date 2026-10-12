@@ -45,8 +45,8 @@ var HEAT = {
     { day: "Thursday",   time: "12:15pm",  name: "The Unstiffening",   floor: "up",   heat: "warm" },
     { day: "Monday",     time: "7:30pm",   name: "The Quiet Hour",     floor: "down", heat: "unheated" },
     { day: "Wednesday",  time: "8pm",      name: "The Quiet Hour",     floor: "up",   heat: "unheated" },
-    { day: "",          time: "",       name: "Strong Bones",      floor: "down", heat: "unheated" },
-    { day: "",          time: "",       name: "Strong Bones",      floor: "up",   heat: "unheated" },
+    { day: "Wednesday",  time: "5:30pm",   name: "Strong Bones",       floor: "down", heat: "unheated" },
+    { day: "Saturday",   time: "10:45am",  name: "Strong Bones",       floor: "up",   heat: "warm" },
     { day: "Tuesday",    time: "9:45am",   name: "Strong and Calm",    floor: "down", heat: "unheated" },
     { day: "Thursday",   time: "9:45am",   name: "Strong and Calm",    floor: "up",   heat: "unheated" }
   ]

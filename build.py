@@ -72,8 +72,8 @@ FEATURED = [
    "Gentle strength in the gym and slow, unheated yoga upstairs, built around energy that changes from week to week. When you arrive, tell Helen how you feel today: green for full of beans, amber for so-so, red for running on empty. She'll shape the session to match.",
    "unheated"),
   ("Strong Bones", "Menopause and after", "Strong enough for the next thirty years.",
-   "Cool, unhurried strength for muscle and bones in the gym, plus yoga for balance upstairs. Daytime sessions during school hours, with a teacher who gets it.",
-   "unheated"),
+   "Cool, unhurried strength for muscle and bones in the gym on Wednesday evenings, plus gentle yoga for balance in the warm room on Saturday mornings, with a teacher who gets it.",
+   "warm"),
   ("The Unstiffening", "Stiff backs and desk bodies, every gender", "Your back called. It would like a word.",
    "Lunchtime strength basics downstairs and a deep stretch in the warm room upstairs. No chanting, no headstands, and time to shower before you head back to work.",
    "warm"),
@@ -88,7 +88,7 @@ FEATURED = [
 def featured_cards():
     out = ""
     for name, forw, head, body, heat in FEATURED:
-        t = temp("Unheated", "unheated") if heat == "unheated" else temp("Upstairs warm, about 28°C", "warm")
+        t = temp("Unheated", "unheated") if heat == "unheated" else (temp("Saturday yoga warm, not hot", "warm") if name == "Strong Bones" else temp("Upstairs warm, about 28°C", "warm"))
         out += f'''<article class="card"><span class="for">{forw}</span><h3><a href="{GP.link_for(name)}">{name}</a></h3>
 <p class="hand" style="font-size:1.45rem">{head}</p><p>{body}</p>
 <div class="meta"><span><b>Twice a week</b>, downstairs and upstairs</span>{t}<span>{GP.when(name)}{", from " + GP.START[name][0] if name in GP.START else ", times " + TBC()}</span></div>
@@ -166,7 +166,7 @@ P["six-week-start.html"] = ("Six-week groups for beginners in Stirling | Heat Fi
     <li>Two sessions a week for six weeks, for £50 in total</li>
     <li>The same small group each week, all starting together</li>
     <li>A strength session in the gym and a yoga class in the studio</li>
-    <li>Unheated sessions, plus a warm stretch for The Unstiffening</li>
+    <li>Unheated sessions, plus warm yoga for The Unstiffening and Strong Bones</li>
     <li>15% off your first membership or class pack when the six weeks end</li>
   </ul>
   <p class="muted">The six weeks are sign-up only, not drop-in, so everyone in the group starts and finishes together. Spaces are limited.</p>
