@@ -62,7 +62,7 @@ def page(fname, title, desc, body, extra_head=""):
             f'<meta property="og:image" content="https://heatfitnessstirling.co.uk/assets/img/studio-helen.jpg">'
             f'{FONTS}<link rel="stylesheet" href="assets/css/site.css">{extra_head}')
     inner = f'{header(fname)}<main id="main">{body}</main>{FOOTER}<script src="assets/js/site.js"></script>'
-    full = (f'<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
+    full = (f'<!doctype html><!-- Heat Fitness, deployed from GitHub --><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
             f'<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png"><link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"><link rel="manifest" href="site.webmanifest"><meta name="theme-color" content="#F68A1D">{head}</head><body>{inner}</body></html>')
     preview_index = '<title>Heat Fitness Website</title>' + f'{head}{inner}'.replace(f'<title>{title}</title>', '', 1)   # the artifact wraps index.html in its own skeleton
     return full, preview_index
