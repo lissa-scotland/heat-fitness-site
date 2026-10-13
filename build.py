@@ -15,6 +15,13 @@ CYCLE_NOW = "the week of 9 November"
 CYCLE_NEXT = "the week of 11 January 2027"
 ADDR = "Unit 22, 15 Borrowmeadow Road, Stirling"
 POSTCODE = "FK7 7FB"
+# Opening hours, as set in Gymcatch.
+HOURS = [("Monday", "8am", "9pm"), ("Tuesday", "8am", "8pm"), ("Wednesday", "8am", "9pm"), ("Thursday", "8am", "8pm"),
+         ("Friday", "8am", "7pm"), ("Saturday", "8am", "12pm"), ("Sunday", "9:30am", "6:30pm")]
+HOURS_HTML = "<br>".join(f"{d}: {a} to {b}" for d, a, b in HOURS)
+def _t24(t):
+    h, m = (t[:-2].split(":") + ["00"])[:2]; h = int(h) % 12 + (12 if t.endswith("pm") else 0); return f"{h:02d}:{m}"
+HOURS_LD = ",".join(f'{{"@type":"OpeningHoursSpecification","dayOfWeek":"{d}","opens":"{_t24(a)}","closes":"{_t24(b)}"}}' for d, a, b in HOURS)
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700&display=swap">')
 UNDERLINE = ('<svg class="underline" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true"><path d="M2 5.5 C 18 2.5, 30 7, 48 4.2 S 80 2.2, 98 4.8" '
@@ -43,7 +50,7 @@ def header(cur):
 
 FOOTER = f'''<footer class="site-foot"><div class="wrap">
   <div class="foot-grid">
-    <div><h2>Find us</h2><p>{ADDR}<br>{POSTCODE}</p><p style="margin-top:8px">Opening hours {TBC()}</p></div>
+    <div><h2>Find us</h2><p>{ADDR}<br>{POSTCODE}</p><p style="margin-top:8px"><b>Opening hours</b><br>{HOURS_HTML}</p></div>
     <div><h2>Talk to Helen</h2><ul><li>Text or call {PHONE_A}</li><li>Studio <a href="tel:01786473694">{STUDIO}</a></li><li><a href="mailto:helen@heatfitness.co.uk">helen@heatfitness.co.uk</a></li></ul></div>
     <div><h2>Pages</h2><ul><li><a href="classes.html">Classes</a></li><li><a href="timetable.html">Timetable</a></li><li><a href="prices.html">Prices</a></li><li><a href="start-here.html">New here?</a></li><li><a href="resources.html">Free resources</a></li></ul></div>
     <div><h2>Classes</h2><ul><li><a href="classes.html#hot">Hot yoga</a></li><li><a href="classes.html#warm">Warm and unheated yoga</a></li><li><a href="classes.html#strength">TRX and the gym</a></li><li><a href="one-to-one.html">Personal training</a></li><li><a href="classes.html#groups">Six-week groups</a></li></ul></div>
@@ -52,9 +59,10 @@ FOOTER = f'''<footer class="site-foot"><div class="wrap">
   <div class="foot-base"><span>&copy; <span id="year">2026</span> Heat Fitness, Stirling</span><a href="privacy.html">Privacy notice</a></div>
 </div></footer>'''
 
-JSONLD = '''<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthClub","name":"Heat Fitness","url":"https://heatfitnessstirling.co.uk/",
-"telephone":"+441786473694","email":"helen@heatfitness.co.uk","address":{"@type":"PostalAddress","streetAddress":"Unit 22, 15 Borrowmeadow Road","addressLocality":"Stirling","postalCode":"FK7 7FB","addressCountry":"GB"},
-"sameAs":["https://www.facebook.com/HeatFitnessScotland","https://www.instagram.com/heatfitnessscotland"]}</script>'''
+JSONLD = f'''<script type="application/ld+json">{{"@context":"https://schema.org","@type":"HealthClub","name":"Heat Fitness","url":"https://heatfitnessstirling.co.uk/",
+"telephone":"+441786473694","email":"helen@heatfitness.co.uk","address":{{"@type":"PostalAddress","streetAddress":"Unit 22, 15 Borrowmeadow Road","addressLocality":"Stirling","postalCode":"FK7 7FB","addressCountry":"GB"}},
+"openingHoursSpecification":[{HOURS_LD}],
+"sameAs":["https://www.facebook.com/HeatFitnessScotland","https://www.instagram.com/heatfitnessscotland"]}}</script>'''
 
 def page(fname, title, desc, body, extra_head=""):
     head = (f'<title>{title}</title><meta name="description" content="{desc}">'
@@ -389,7 +397,7 @@ P["contact.html"] = ("Contact and directions | Heat Fitness, Stirling",
     <div><dt>Studio phone</dt><dd><a href="tel:01786473694">{STUDIO}</a></dd></div>
     <div><dt>Email</dt><dd><a href="mailto:helen@heatfitness.co.uk">helen@heatfitness.co.uk</a></dd></div>
     <div><dt>Address</dt><dd>{ADDR}<br>{POSTCODE}</dd></div>
-    <div><dt>Opening hours</dt><dd>{TBC()}</dd></div>
+    <div><dt>Opening hours</dt><dd>{HOURS_HTML}</dd></div>
     <div><dt>Getting here</dt><dd>Parking {TBC()}. The gym is on the ground floor, with an accessible toilet. The studio is upstairs, up 26 steps with a landing halfway, and there's no lift.</dd></div>
     <div><dt>Map</dt><dd><a href="https://www.google.com/maps/search/?api=1&query=Heat+Fitness+Borrowmeadow+Road+Stirling">Open in Google Maps</a></dd></div>
   </dl>
