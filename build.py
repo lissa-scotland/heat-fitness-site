@@ -348,7 +348,7 @@ TEAM = [
   ["I bring energy, encouragement and a love of movement to every class. My flow and power Hatha classes are challenging and rewarding, with room for you to explore at your own pace. I love a good hand balance, so expect a few playful challenges alongside mindful movement.",
    "You'll get clear cues, a nudge to push just a little further, and a supportive room where you can laugh, sweat and leave feeling strong. Off the mat, I'm always looking for the next way to balance, move and challenge myself."],
   "500-hour trained with Awakening Yoga Academy, 200-hour with Our World Yoga, 50-hour Hot 26 &amp; 2 with Breeze, Level 2 Personal Trainer"),
- ("Felicity", "Hot 26 &amp; 2", "felicity", "Felicity smiling, with long auburn hair",
+ ("Felicity", "Hot 26 &amp; 2: 26 postures, 2 breathing exercises", "felicity", "Felicity smiling, with long auburn hair",
   ["My hot yoga journey began in 2012 in New York, where I was working at the time. A friend insisted I join her for a class. It was tough, but 90 minutes later I felt completely rejuvenated, so I went back the next day, and the next, and the day after that.",
    "After many years of competing in and teaching martial arts, my body was battered, and this practice helped it recover and gave me peace of mind and focus. I believe everyone can benefit, whatever their age, size or fitness. That's why I trained as a teacher: to share it with as many people as possible."],
   "Bikram Yoga Teacher Training"),
