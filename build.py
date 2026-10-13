@@ -26,7 +26,7 @@ def temp(label, key):
     return f'<span class="temp"><i style="background:{HEAT_COL[key]};{border}"></i>{label}</span>'
 
 NAV = [("classes.html", "Classes"), ("one-to-one.html", "One-to-one"), ("timetable.html", "Timetable"), ("prices.html", "Prices"),
-       ("start-here.html", "New here?"), ("meet-helen.html", "Meet Helen"), ("news.html", "News"), ("resources.html", "Free resources"), ("contact.html", "Contact")]
+       ("start-here.html", "New here?"), ("meet-helen.html", "Meet Helen"), ("meet-the-team.html", "Meet the team"), ("news.html", "News"), ("resources.html", "Free resources"), ("contact.html", "Contact")]
 
 def header(cur):
     links = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == cur else ""}>{t}</a>' for h, t in NAV)
@@ -321,7 +321,7 @@ P["meet-helen.html"] = ("Meet Helen, owner of Heat Fitness, Stirling",
  "Helen is a qualified personal trainer and yoga teacher who runs Heat Fitness in Stirling.",
  f'''<section class="hero"><div class="wrap hero-grid">
   <div><span class="kicker">Meet Helen</span><h1 class="display" style="margin-top:.6rem;font-size:clamp(2.4rem,6vw,4.4rem)">Hello, I'm Helen<span class="hand" style="display:block;text-transform:none">and this is my studio.</span></h1>{UNDERLINE}
-  <p class="lead">I'm a personal trainer and yoga teacher, and I run Heat Fitness with a lovely team of teachers, upstairs and downstairs.</p></div>
+  <p class="lead">I'm a personal trainer and yoga teacher, and I run Heat Fitness with a <a href="meet-the-team.html">lovely team of teachers</a>, upstairs and downstairs.</p></div>
   <figure class="polaroid left tall"><img src="assets/img/helen-mats.jpg" alt="Helen smiling in front of the wall of yoga mats" width="900" height="975"><figcaption>Helen</figcaption></figure>
 </div></section>
 <section class="section"><div class="wrap split" style="align-items:start">
@@ -334,6 +334,48 @@ P["meet-helen.html"] = ("Meet Helen, owner of Heat Fitness, Stirling",
   </div>
   <div class="card"><h3>Qualifications</h3><ul class="ticks"><li>Level 3 Personal Trainer</li><li>Level 2 Certificate in Fitness Instructing</li><li>200-hour yoga teacher training, and around 700 classes taught</li><li>Menopause coach</li><li>TRX suspension training, Metafit and aqua fitness instructor</li><li>First aid trained</li><li>Training as a breathwork coach</li></ul></div>
 </div></section>''')
+
+TEAM = [
+ ("Yvonne", "Yin and Somatics", "yvonne", "Yvonne in a pink fleece, smiling",
+  ["Yoga has kept me fit, active and calm for 25 years, through a stressful career and raising four boys. However overworked I felt, I always left class feeling physically alive and relaxed at the same time.",
+   "Wanting to know more, I've completed four yoga and somatic teacher trainings in the last five years, and I'm still fascinated by how bones, muscles, fascia and nerves work together. In my Sunday morning class you'll have 75 minutes of yin yoga, somatic movement and yoga nidra. The invitation is to be curious, and to find the right balance of challenge and rest for your body."],
+  "Four yoga and somatic teacher trainings"),
+ ("Lauren", "The Set and Warm Flow", "lauren", "Lauren smiling outside a yoga studio",
+  ["Don't let the calm yoga voice fool you: my classes are equal parts effort and ease. Yoga gives me the tools to stay sane(ish) when life gets chaotic, and I bring that grounding onto the mat. I've been moving, sweating and laughing with the Heat crew since day one.",
+   "We build poses step by step, so you can stop wherever feels right. Expect clear alignment cues, encouragement to hold on for one more breath, and plenty of support. Not on the mat? I'm probably drinking coffee."],
+  "500-hour trained with Awakening Yoga Academy, 200-hour with Our World Yoga, 50-hour Hot 26 &amp; 2 with Breeze"),
+ ("Craig", "Flow, Power Hatha and TRX", "craig", "Craig in a yoga t-shirt",
+  ["I bring energy, encouragement and a love of movement to every class. My flow and power Hatha classes are challenging and rewarding, with room for you to explore at your own pace. I love a good hand balance, so expect a few playful challenges alongside mindful movement.",
+   "You'll get clear cues, a nudge to push just a little further, and a supportive room where you can laugh, sweat and leave feeling strong. Off the mat, I'm always looking for the next way to balance, move and challenge myself."],
+  "500-hour trained with Awakening Yoga Academy, 200-hour with Our World Yoga, 50-hour Hot 26 &amp; 2 with Breeze, Level 2 Personal Trainer"),
+ ("Felicity", "Hot 26 &amp; 2", "felicity", "Felicity smiling, with long auburn hair",
+  ["My hot yoga journey began in 2012 in New York, where I was working at the time. A friend insisted I join her for a class. It was tough, but 90 minutes later I felt completely rejuvenated, so I went back the next day, and the next, and the day after that.",
+   "After many years of competing in and teaching martial arts, my body was battered, and this practice helped it recover and gave me peace of mind and focus. I believe everyone can benefit, whatever their age, size or fitness. That's why I trained as a teacher: to share it with as many people as possible."],
+  "Bikram Yoga Teacher Training"),
+ ("Laura", "Power Yoga", "laura", "Laura sitting on a yoga mat with a strap round her foot",
+  ["I fell in love with yoga nearly 20 years ago, when my doctor told me I needed to change my lifestyle. I tried lots of gym classes, but yoga was the only one I actually enjoyed, and I can't imagine life without it now.",
+   "I trained as a teacher in 2019, in Sri Lanka, Bali and Ibiza, so you can probably guess I love to travel. I live in Menstrie with my cockapoo Ava, and when I'm not on the mat or at my desk job, we're up the hills or off on adventures in Sheila the camper van."],
+  "Trained in Sri Lanka, Bali and Ibiza since 2019"),
+ ("Carly", "Yoga and Pilates", "carly", "Carly smiling, sitting on a mossy log in a forest",
+  ["I'm a yoga and movement teacher in Stirling, with nearly ten years of teaching behind me and ongoing study in yoga, Pilates, breathwork and modern movement.",
+   "My classes weave together fluid movement, mindful strength, breath-led practice and moments of stillness, in a calm and welcoming room. Drawing on both yoga and Pilates, I keep things grounded, accessible and right for your body."],
+  "200-hour Hot Yoga (Absolute Yoga Academy), 50-hour Yin (Tribe Academy), Level 3 Diploma in Teaching Yoga (Active IQ), Pregnancy Yoga (50 hours), Kids Yoga, Yoga Trapeze, Yoga Breath Coach, and ongoing STOTT Pilates training"),
+]
+def team_cards():
+    out = ""
+    for name, teaches, img, alt, paras, quals in TEAM:
+        ps = "".join(f"<p>{p}</p>" for p in paras)
+        out += f'''<article class="card"><img class="card-img portrait" src="assets/img/team/{img}.jpg" alt="{alt}" width="480" height="600" loading="lazy"><span class="for">{teaches}</span><h3>{name}</h3>{ps}<p class="muted" style="font-size:.9rem"><b>Training:</b> {quals}</p></article>'''
+    return out
+
+P["meet-the-team.html"] = ("Meet the team: yoga and fitness teachers at Heat Fitness, Stirling",
+ "Meet the teachers at Heat Fitness in Stirling, from hot yoga and power yoga to yin, somatics, Pilates and TRX.",
+ f'''<section class="hero"><div class="wrap">
+  <span class="kicker">Meet the team</span><h1 class="display" style="margin-top:.6rem;font-size:clamp(2.4rem,6vw,4.4rem)">The people<span class="hand" style="display:block;text-transform:none">behind your classes.</span></h1>{UNDERLINE}
+  <p class="lead">Helen runs Heat Fitness with a small team of teachers, each with their own style, from slow Sunday yin to sweaty hot yoga. <a href="meet-helen.html">Meet Helen</a>, then say hello to the rest of the team.</p>
+</div></section>
+<section class="section"><div class="wrap"><div class="cards groups">{team_cards()}</div>
+  <p style="margin-top:1.4rem">See when each class runs on the <a href="timetable.html">timetable</a>, or read about <a href="classes.html">all our classes</a>.</p></div></section>''')
 
 P["contact.html"] = ("Contact and directions | Heat Fitness, Stirling",
  "Find Heat Fitness on Borrowmeadow Road, Stirling. Text or call Helen, check opening hours, and see parking and access.",
