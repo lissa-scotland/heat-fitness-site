@@ -131,7 +131,7 @@ P["index.html"] = ("Gym, yoga and hot yoga in Stirling for beginners | Heat Fitn
   <div><span class="kicker">Heat Fitness, Borrowmeadow Road, Stirling</span>
     <h1 class="display" style="margin-top:.6rem">Walking in<span class="hand">is the hardest part.</span></h1>{UNDERLINE}
     <p class="lead">Hi, welcome to Heat. I'm Helen. I've worked here since the studio opened, and it's my absolute pleasure to be running it now. I want this to be a space with something for everybody, from super slow, on-the-floor yoga to hot classes and strength sessions in the gym. You only ever do what you can manage, and nobody's going to force anything on you.</p>
-    <p class="lead" style="margin-top:.9rem">Already one of us? Your Hot 26 &amp; 2, Fierce Grace and Yin are going nowhere. Everything I'm doing here is for you guys, so tell me what you want and I'll do my best to make it happen. See you on the mat!</p>
+    <p class="lead" style="margin-top:.9rem">Already one of us? Your Hot 26 &amp; 2, Fierce Grace and Yin are going nowhere. Everything I'm doing here is for you, so tell me what you want and I'll do my best to make it happen. See you on the mat!</p>
     <p class="hand" style="font-size:1.8rem;margin-top:.2rem">Helen x</p>
     <div class="cta-row"><a class="btn" href="start-here.html">New here? Start here</a></div>
     <p class="cta-note" style="margin-top:1rem">or just text me on {PHONE_A}</p></div>
@@ -326,9 +326,9 @@ P["meet-helen.html"] = ("Meet Helen, owner of Heat Fitness, Stirling",
 </div></section>
 <section class="section"><div class="wrap split" style="align-items:start">
   <div class="stack measure">
-    <p>I've worked here since the studio opened, teaching for Jack and Jules, and now I've taken over from them. It's my absolute pleasure to be in charge. I want to create a space with something for everybody, whether that's super slow yoga on the floor, a sweaty hot class or a strength session downstairs.</p>
-    <p>What keeps me going is watching people change. I've seen someone who couldn't touch their toes end up with their leg in the air. I've seen someone who couldn't lie still for a minute tell me the rest at the end is now their favourite bit. That's the kind of stuff that's why I do it.</p>
-    <p>It's never a good idea to ram anything down anyone's throat, so I won't. I'd much rather work with what you want. Everything I'm doing here is for you guys, so tell me what you'd like and I'll do my best to make it happen.</p>
+    <p>I've worked here since the studio opened, teaching various classes, and now I've been lucky enough to take on the business. It's my absolute pleasure to be here. I want to create a space with something for everybody, whether that's super slow yoga on the floor, a sweaty hot class or a strength session downstairs.</p>
+    <p>What keeps me going is watching people change. I've seen someone who couldn't touch their toes end up with their leg in the air. I've seen someone who couldn't lie still for a minute tell me the rest at the end is now their favourite bit.</p>
+    <p>I'm a big believer in not forcing things on people. I'd much rather work with what you can do and what you want to do. Everything I'm doing here is for you, so tell me what you'd like and I'll do my best to make it happen.</p>
     <p>We're Stirling's only hot yoga studio, but not every class is hot. Downstairs there's a small gym where I teach strength. Upstairs there's the studio for yoga, hot and cool.</p>
     <p class="note" style="margin-top:.6rem">Pop in for a cup of tea first. No pressure, and no sales pitch.</p>
   </div>

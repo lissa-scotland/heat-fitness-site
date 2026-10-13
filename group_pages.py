@@ -114,7 +114,7 @@ def build(P, temp, TBC, UNDERLINE, PHONE, CYCLE_NOW, CYCLE_NEXT):
                   else f"{g['when']}. Exact times are being confirmed now. Check the timetable page, or text Helen and she'll let you know.")
         starts = st[0] if st else CYCLE_NOW
         faqs = g["faqs"] + [("When are the sessions?", when_a),
-                            ("Is it a one-off?", f"No. The groups run in six-week cycles all year. The next cycle starts {CYCLE_NOW}, and the one after that in {CYCLE_NEXT}. You can join at the start of any cycle, and carry on from one to the next."),
+                            ("Is it a one-off?", f"No. The groups run in six-week cycles all year. The next cycle starts {starts}, and the one after that in {CYCLE_NEXT}. You can join at the start of any cycle, and carry on from one to the next."),
                             ("How do I join?", "Fill in the short form to save your place, and Helen will confirm the times and how to pay. Or text Helen and she'll answer any questions first.")]
         faq_html = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faqs)
         others = "".join(f'<a class="btn ghost" href="{o["slug"]}">{o["name"]}</a>' for o in GROUPS if o is not g)
