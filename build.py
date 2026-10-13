@@ -92,7 +92,7 @@ def featured_cards():
         out += f'''<article class="card"><span class="for">{forw}</span><h3><a href="{GP.link_for(name)}">{name}</a></h3>
 <p class="hand" style="font-size:1.45rem">{head}</p><p>{body}</p>
 <div class="meta"><span><b>Twice a week</b>, downstairs and upstairs</span>{t}<span>{GP.when(name)}{", from " + GP.START[name][0] if name in GP.START else ", times " + TBC()}</span></div>
-<span data-places="{name}" hidden></span><a class="card-link" href="{GP.link_for(name)}">Find out more about {name}</a></article>'''
+<span data-places="{name}" hidden></span><div class="cta-row" style="margin-top:.8rem">{GP.book_btn(name)}<a class="card-link" href="{GP.link_for(name)}">Find out more about {name}</a></div></article>'''
     out += f'''<article class="card running"><span class="for">Women over 40 · running now</span><h3>Women's Strength</h3>
 <p class="hand" style="font-size:1.45rem">Strong through the change.</p><p>Our small women's-only strength group is already up and running, and some of the women have been coming for over two years. More weights than cardio, for women through perimenopause and menopause. Booked a month at a time, and there's usually space.</p>
 <div class="meta"><span><b>Wednesdays and Fridays</b>, 6:30am</span>{temp("Unheated", "unheated")}<span><b>£15</b> a session</span></div>
@@ -156,9 +156,9 @@ P["six-week-start.html"] = ("Six-week groups for beginners in Stirling | Heat Fi
   <span class="kicker">Next cycle starts {CYCLE_NOW}</span>
   <h1 class="display" style="margin-top:.6rem;font-size:clamp(2.4rem,6vw,4.4rem)">Six-week groups<span class="hand" style="display:block;text-transform:none">two sessions a week, in a small group.</span></h1>{UNDERLINE}
   <p class="lead">Four weeks is too short to feel the difference, so we've made it six. You'll come twice a week with the same small group, one session downstairs in the gym and one upstairs in the studio. When one cycle ends the next begins, so you can join at the start of any cycle.</p>
-  <div class="cta-row"><a class="btn" href="#groups">Pick your group</a><a class="btn ghost" href="#signup">Save your place</a></div>
+  <div class="cta-row"><a class="btn" href="#groups">Pick your group and book</a><a class="btn ghost" href="#signup">Next cycle? Leave your details</a></div>
 </div></section>
-{six_band("#signup", "Save your place")}
+{six_band("#groups", "Pick your group and book")}
 <section class="section"><div class="wrap"><div class="strip"><figure class=""><img src="assets/img/photos/studio-group.jpg" alt="A group in the studio" loading="lazy"><figcaption>A group in the studio</figcaption></figure><figure class=""><img src="assets/img/photos/trx-team.jpg" alt="The TRX team" loading="lazy"><figcaption>The TRX team</figcaption></figure><figure class=""><img src="assets/img/photos/members-group.jpg" alt="Friends made in class" loading="lazy"><figcaption>Friends made in class</figcaption></figure></div></div></section>
 <section class="section"><div class="wrap split" style="align-items:start">
   <div class="stack"><h2 class="display" style="font-size:1.8rem">What you get</h2>
@@ -169,8 +169,8 @@ P["six-week-start.html"] = ("Six-week groups for beginners in Stirling | Heat Fi
     <li>Unheated sessions, plus warm yoga for The Unstiffening and Strong Bones</li>
     <li>15% off your first membership or class pack when the six weeks end</li>
   </ul>
-  <p class="muted">The six weeks are sign-up only, not drop-in, so everyone in the group starts and finishes together. Spaces are limited.</p>
-  <div class="cta-row"><a class="btn" href="#signup">Save your place</a><span class="muted">or text Helen on {PHONE_A}</span></div></div>
+  <p class="muted">The six weeks are booked as a whole course, not drop-in, so everyone in the group starts and finishes together. Spaces are limited.</p>
+  <div class="cta-row"><a class="btn" href="#groups">Pick your group and book</a><span class="muted">or text Helen on {PHONE_A}</span></div></div>
   <div class="stack" id="groups"><h2 class="display" style="font-size:1.8rem">Pick your group</h2>
   <div class="cards" style="grid-template-columns:1fr">{featured_cards()}</div></div>
 </div></section>
@@ -179,11 +179,11 @@ P["six-week-start.html"] = ("Six-week groups for beginners in Stirling | Heat Fi
   <details><summary>What if I miss a session?</summary><p>Life happens. Let Helen know and she'll help you catch up. {TBC("catch-up policy")}</p></details>
   <details><summary>Can I just try one class first?</summary><p>Yes. If the six weeks aren't for you, bring our leaflet and your first class is free.</p></details>
   <details><summary>What happens after six weeks?</summary><p>The groups run in cycles, so you can carry straight on into the next six weeks with your group. Or you can move into any of our regular classes, with 15% off your first membership or class pack. Two weeks before the end, Helen will chat to you about what suits you best.</p></details>
-  <details><summary>When does the next cycle start?</summary><p>The next cycle starts {CYCLE_NOW} and runs up to Christmas. The one after that starts {CYCLE_NEXT}. If you can't make this one, save your place for the next.</p></details>
+  <details><summary>When does the next cycle start?</summary><p>The next cycle starts {CYCLE_NOW} and runs up to Christmas. The one after that starts {CYCLE_NEXT}. If you can't make this one, leave your details for the next.</p></details>
 </div></div></section>
 <section class="section" id="signup"><div class="wrap split" style="align-items:start">
-  <div class="stack"><span class="kicker">Save your place</span><h2 class="display" style="font-size:1.8rem">Sign up for a group</h2>
-  <p>Tell us which group you'd like to join and how to reach you. Helen will get back to you to confirm your place, the times and how to pay. Nothing is charged until she does.</p>
+  <div class="stack"><span class="kicker">Not ready to book?</span><h2 class="display" style="font-size:1.8rem">Leave your details</h2>
+  <p>If you'd like to join a later cycle, or you're not sure which group is right for you, tell us how to reach you and Helen will get in touch. Nothing is charged.</p>
   <p>Prefer not to fill in a form? Text Helen on {PHONE_A} and she'll reply by text.</p></div>
   <form class="card" name="six-week-signup" method="POST" data-netlify="true" netlify-honeypot="company" action="thanks.html">
     <input type="hidden" name="form-name" value="six-week-signup">
@@ -242,7 +242,7 @@ P["classes.html"] = ("Yoga and strength classes in Stirling, hot and unheated | 
 <section class="section" id="groups"><div class="wrap">
   <div class="sec-head"><span class="kicker">New: six-week groups</span><h2 class="display">Our six-week groups</h2><p class="measure">Alongside the regular timetable, we now run small six-week groups for people who'd like a bit more support to get started. Each one has two sessions a week, one downstairs and one upstairs. Each group runs in six-week cycles, and the next starts {CYCLE_NOW}.</p></div>
   <div class="cards groups">{featured_cards()}</div>
-  <div class="cta-row" style="margin-top:1.4rem;justify-content:center"><a class="btn" href="six-week-start.html#signup">Save your place</a><a class="btn ghost" href="six-week-start.html">How the six weeks work</a></div></div></section>''')
+  <div class="cta-row" style="margin-top:1.4rem;justify-content:center"><a class="btn" href="six-week-start.html#groups">Pick your group and book</a><a class="btn ghost" href="six-week-start.html">How the six weeks work</a></div></div></section>''')
 
 P["timetable.html"] = ("Class timetable and booking | Heat Fitness, Stirling",
  "The live class timetable for Heat Fitness in Stirling. See what's on, check spaces and book your class.",
@@ -254,7 +254,7 @@ P["timetable.html"] = ("Class timetable and booking | Heat Fitness, Stirling",
   <div class="mindbody-widget" data-widget-type="Schedules" data-widget-id="d6713468a54"></div>
   <p class="booking-fallback muted">If the timetable doesn't appear, <a href="https://go.mindbodyonline.com/book/widgets/schedules/view/d6713468a54/schedule" target="_blank" rel="noopener">open it in a new tab</a>.</p>
 </div></div></section>
-<section class="section"><div class="wrap"><div class="sec-head"><span class="kicker">Six-week groups</span><h2 class="display">Our six-week groups</h2><p class="measure">Times for the six-week groups are being finalised. These are sign-up only, so <a href="six-week-start.html#signup">save your place here</a> rather than booking above.</p></div><div class="days" id="timetable"></div></div></section>
+<section class="section"><div class="wrap"><div class="sec-head"><span class="kicker">Six-week groups</span><h2 class="display">Our six-week groups</h2><p class="measure">These are booked as a whole six weeks, so <a href="six-week-start.html#groups">pick your group and book here</a> rather than booking above.</p></div><div class="days" id="timetable"></div></div></section>
 <section class="section"><div class="wrap"><div class="card"><h3>Still being finalised</h3><ul class="ticks" id="pending"></ul></div></div></section>
 <script src="https://brandedweb.mindbodyonline.com/embed/widget.js" async></script>''')
 

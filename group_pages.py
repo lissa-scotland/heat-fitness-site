@@ -15,6 +15,19 @@ START = {
     "Strong Bones": ("Wednesday 11 November", "Saturday 19 December"),
 }
 
+# Gymcatch booking links for each course.
+GC = "https://gymcatch.com/app/provider/11798/courses/"
+BOOK = {
+    "Steady and Strong": GC + "47724",
+    "The Quiet Hour": GC + "47725",
+    "Strong and Calm": GC + "47727",
+    "The Unstiffening": GC + "47728",
+    "Strong Bones": GC + "47729",
+}
+
+def book_btn(name, label="Book your place", cls="btn"):
+    return f'<a class="{cls}" href="{BOOK[name]}" target="_blank" rel="noopener">{label}</a>'
+
 GROUPS = [
  dict(name="Strong and Calm", when="Tuesdays and Thursdays, 9:45am", slug="perimenopause-exercise-stirling.html", photo=("gym-strength.jpg", "Strength training in the gym"),
   title="Perimenopause exercise classes in Stirling: strength and gentle yoga | Heat Fitness",
@@ -63,7 +76,7 @@ GROUPS = [
        "You'd like to be around people without having to talk"],
   faqs=[("What if I need to leave halfway through?", "That's absolutely fine. Sit near the door if it helps, and leave whenever you need to. Nobody will ask why."),
         ("Do I have to talk to anyone?", "No. You're welcome to arrive, take part and go home without chatting."),
-        ("Do I have to phone?", "No. You can save your place with the online form, or send Helen a text and she'll reply by text."),
+        ("Do I have to phone?", "No. You can book online, or send Helen a text and she'll reply by text."),
         ("Is this therapy?", "No. It's gentle exercise in a calm setting, and it doesn't replace any support you already have. If you're struggling, please also talk to your GP.")]),
  dict(name="Steady and Strong", when="Mondays and Wednesdays, 10am", slug="over-60s-exercise-classes-stirling.html", photo=("gym-corridor.jpg", "The gym downstairs, with plenty of wall to hold on to"),
   title="Exercise classes for over-60s in Stirling: strength, balance and gentle yoga | Heat Fitness",
@@ -115,7 +128,7 @@ def build(P, temp, TBC, UNDERLINE, PHONE, CYCLE_NOW, CYCLE_NEXT):
         starts = st[0] if st else CYCLE_NOW
         faqs = g["faqs"] + [("When are the sessions?", when_a),
                             ("Is it a one-off?", f"No. The groups run in six-week cycles all year. The next cycle starts {starts}, and the one after that in {CYCLE_NEXT}. You can join at the start of any cycle, and carry on from one to the next."),
-                            ("How do I join?", "Fill in the short form to save your place, and Helen will confirm the times and how to pay. Or text Helen and she'll answer any questions first.")]
+                            ("How do I join?", f"Book and pay online through our booking system, Gymcatch. You can use the app or book straight from your browser. If you'd like to ask a question first, text Helen on {PHONE} and she'll get back to you.")]
         faq_html = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faqs)
         others = "".join(f'<a class="btn ghost" href="{o["slug"]}">{o["name"]}</a>' for o in GROUPS if o is not g)
         ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -125,7 +138,7 @@ def build(P, temp, TBC, UNDERLINE, PHONE, CYCLE_NOW, CYCLE_NEXT):
 <section class="hero"><div class="wrap hero-grid">
   <div><span class="kicker">{g["kicker"]}</span><h1 class="display" style="margin-top:.6rem;font-size:clamp(2.4rem,6vw,4.4rem)">{g["h1a"]}<span class="hand" style="display:block;text-transform:none">{g["h1b"]}</span></h1>{UNDERLINE}
   <p class="lead">{g["lead"]}</p>
-  <div class="cta-row"><a class="btn" href="{signup}">Save your place</a><a class="btn ghost" href="six-week-start.html#groups">Compare all groups</a></div>
+  <div class="cta-row">{book_btn(g["name"])}<a class="btn ghost" href="six-week-start.html#groups">Compare all groups</a></div>
   <p class="cta-note" style="margin-top:.8rem">{"Starts" if st else "Next cycle starts"} {starts}. Or text Helen on {PHONE}</p></div>
   <figure class="polaroid tall"><img src="assets/img/photos/{g["photo"][0]}" alt="{g["photo"][1]}" loading="lazy"><figcaption>{g["name"]}</figcaption></figure>
 </div></section>
@@ -134,7 +147,8 @@ def build(P, temp, TBC, UNDERLINE, PHONE, CYCLE_NOW, CYCLE_NEXT):
   <div class="card"><h3>A six-week group</h3><p>{g["name"]} is one of our six-week groups. It meets twice a week, once downstairs in the gym and once upstairs in the studio, with {s["size"].lower()} people so Helen gets to know everyone. It runs in six-week cycles all year: the next starts {starts}, and the one after that in {CYCLE_NEXT}. When your six weeks are up, you can carry on into the next cycle or move into any class on our <a href="classes.html">regular timetable</a>.</p>
   <div class="meta"><span><b>{g["when"]}</b>{"" if st else ", times " + TBC()}</span><span><b>£50</b> for six weeks</span></div>
   <span data-places="{g["name"]}" hidden></span>
-  <div class="cta-row"><a class="btn" href="{signup}">Save your place</a></div></div>
+  <div class="cta-row">{book_btn(g["name"])}</div>
+  <p class="muted" style="margin-top:.6rem">Can't make this cycle? <a href="{signup}">Leave your details for the next one</a>.</p></div>
 </div></section>
 <section class="section"><div class="wrap"><div class="sec-head"><h2 class="display">What happens in a session</h2></div>
   <div class="cards two">{down}{up}</div></div></section>
