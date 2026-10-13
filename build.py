@@ -405,6 +405,15 @@ P["contact.html"] = ("Contact and directions | Heat Fitness, Stirling",
   </form></div>
 </div></section>''')
 
+GYMCATCH_KEY = "02209605-f131-4d9f-b7ad-b6665aab4e67"
+P["book.html"] = ("Book online | Heat Fitness, Stirling", "Book and pay for Heat Fitness six-week groups online.",
+ f'''<section class="section book-page"><div class="wrap">
+  <span class="kicker">Book online</span><h1 class="display" style="font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 .6rem">Book your place</h1>
+  <p class="muted" style="margin:0 0 1.4rem">Bookings and payments are handled securely by Gymcatch. Any questions? Text Helen on {PHONE_A}.</p>
+  <div class="gc-wrap"><gymcatch-embedded key="{GYMCATCH_KEY}"></gymcatch-embedded></div>
+</div></section>
+<script src="https://gymcatch.com/app/js/bootstrap.js"></script>''')
+
 P["thanks.html"] = ("Message sent | Heat Fitness, Stirling", "Thanks for getting in touch with Heat Fitness.",
  f'''<section class="hero"><div class="wrap"><h1 class="display" style="font-size:clamp(2.4rem,6vw,4rem)">Thank you<span class="hand" style="display:block;text-transform:none">Helen will be in touch soon.</span></h1>{UNDERLINE}
  <p class="lead">If it's urgent, text her on {PHONE_A}.</p><div class="cta-row"><a class="btn" href="index.html">Back to the home page</a><a class="btn ghost" href="classes.html">See our classes</a></div></div></section>''')

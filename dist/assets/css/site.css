@@ -300,3 +300,19 @@ html { scroll-padding-top: 90px; }
 .soon { margin-top: auto; align-self: flex-start; font-weight: 700; font-size: .85rem; padding: 5px 12px; border-radius: 999px; background: var(--cool); color: var(--ink); }
 
 .card-img.portrait { aspect-ratio: 4 / 5; object-position: center top; }
+
+/* Gymcatch booking app, embedded on book.html. Set on the element so it beats Gymcatch's own :root theme. */
+.gc-wrap { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(.5rem, 2vw, 1.25rem); }
+gymcatch-embedded {
+  --gc-highlight-color: var(--accent);
+  --gc-foreground-color: var(--ink);
+  --gc-foreground-secondary-color: var(--line);
+  --gc-background-color: var(--card);
+  --gc-secondary-text-color: var(--muted);
+  --gc-font-family: var(--body);
+  --gc-header-font-family: var(--body);
+  --gc-font-size: 15px;
+  --gc-border-radius: 8px;
+  --gc-button-border-radius: 999px;
+  display: block;
+}

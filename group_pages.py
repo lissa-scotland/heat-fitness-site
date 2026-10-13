@@ -16,7 +16,7 @@ START = {
 }
 
 # Gymcatch booking links for each course.
-GC = "https://gymcatch.com/app/provider/11798/courses/"
+GC = "book.html#/courses/"  # the Gymcatch app embedded on our own booking page
 BOOK = {
     "Steady and Strong": GC + "47724",
     "The Quiet Hour": GC + "47725",
@@ -26,7 +26,7 @@ BOOK = {
 }
 
 def book_btn(name, label="Book your place", cls="btn"):
-    return f'<a class="{cls}" href="{BOOK[name]}" target="_blank" rel="noopener">{label}</a>'
+    return f'<a class="{cls}" href="{BOOK[name]}">{label}</a>'
 
 GROUPS = [
  dict(name="Strong and Calm", when="Tuesdays and Thursdays, 9:45am", slug="perimenopause-exercise-stirling.html", photo=("gym-strength.jpg", "Strength training in the gym"),
