@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import group_pages as GP
 
 TBC = lambda s="to confirm": f'<span class="tbc">{s}</span>'
-PHONE = "07718 339510"; STUDIO = "01786 473694"
+PHONE = "07718 339510"
 PHONE_A = f'<a href="tel:07718339510">{PHONE}</a>'
 # Six-week cycles. Change these when Helen confirms dates.
 CYCLE_NOW = "the week of 9 November"
@@ -51,7 +51,7 @@ def header(cur):
 FOOTER = f'''<footer class="site-foot"><div class="wrap">
   <div class="foot-grid">
     <div><h2>Find us</h2><p>{ADDR}<br>{POSTCODE}</p><p style="margin-top:8px"><b>Opening hours</b><br>{HOURS_HTML}</p></div>
-    <div><h2>Talk to Helen</h2><ul><li>Text or call {PHONE_A}</li><li>Studio <a href="tel:01786473694">{STUDIO}</a></li><li><a href="mailto:helen@heatfitness.co.uk">helen@heatfitness.co.uk</a></li></ul></div>
+    <div><h2>Talk to Helen</h2><ul><li>Text or call {PHONE_A}</li><li><a href="mailto:helen@heatfitness.co.uk">helen@heatfitness.co.uk</a></li></ul></div>
     <div><h2>Pages</h2><ul><li><a href="classes.html">Classes</a></li><li><a href="timetable.html">Timetable</a></li><li><a href="prices.html">Prices</a></li><li><a href="start-here.html">New here?</a></li><li><a href="resources.html">Free resources</a></li></ul></div>
     <div><h2>Classes</h2><ul><li><a href="classes.html#hot">Hot yoga</a></li><li><a href="classes.html#warm">Warm and unheated yoga</a></li><li><a href="classes.html#strength">TRX and the gym</a></li><li><a href="one-to-one.html">Personal training</a></li><li><a href="classes.html#groups">Six-week groups</a></li></ul></div>
     <div><h2>Follow us</h2><ul><li><a href="https://www.facebook.com/HeatFitnessScotland">Facebook</a></li><li><a href="https://www.instagram.com/heatfitnessscotland">Instagram</a></li></ul></div>
@@ -60,7 +60,7 @@ FOOTER = f'''<footer class="site-foot"><div class="wrap">
 </div></footer>'''
 
 JSONLD = f'''<script type="application/ld+json">{{"@context":"https://schema.org","@type":"HealthClub","name":"Heat Fitness","url":"https://heatfitnessstirling.co.uk/",
-"telephone":"+441786473694","email":"helen@heatfitness.co.uk","address":{{"@type":"PostalAddress","streetAddress":"Unit 22, 15 Borrowmeadow Road","addressLocality":"Stirling","postalCode":"FK7 7FB","addressCountry":"GB"}},
+"telephone":"+447718339510","email":"helen@heatfitness.co.uk","address":{{"@type":"PostalAddress","streetAddress":"Unit 22, 15 Borrowmeadow Road","addressLocality":"Stirling","postalCode":"FK7 7FB","addressCountry":"GB"}},
 "openingHoursSpecification":[{HOURS_LD}],
 "sameAs":["https://www.facebook.com/HeatFitnessScotland","https://www.instagram.com/heatfitnessscotland"]}}</script>'''
 
@@ -394,7 +394,6 @@ P["contact.html"] = ("Contact and directions | Heat Fitness, Stirling",
 <section class="section"><div class="wrap split" style="align-items:start">
   <dl class="info-list">
     <div><dt>Text or call Helen</dt><dd>{PHONE_A}</dd></div>
-    <div><dt>Studio phone</dt><dd><a href="tel:01786473694">{STUDIO}</a></dd></div>
     <div><dt>Email</dt><dd><a href="mailto:helen@heatfitness.co.uk">helen@heatfitness.co.uk</a></dd></div>
     <div><dt>Address</dt><dd>{ADDR}<br>{POSTCODE}</dd></div>
     <div><dt>Opening hours</dt><dd>{HOURS_HTML}</dd></div>
