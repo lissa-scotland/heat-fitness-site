@@ -426,7 +426,8 @@ GYMCATCH_KEY = "02209605-f131-4d9f-b7ad-b6665aab4e67"
 P["book.html"] = ("Book online | Heat Fitness, Stirling", "Book and pay for Heat Fitness six-week groups online.",
  f'''<section class="section book-page"><div class="wrap">
   <span class="kicker">Book online</span><h1 class="display" style="font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 .6rem">Book your place</h1>
-  <p class="muted" style="margin:0 0 1.4rem">Bookings and payments are handled securely by Gymcatch. Any questions? Text Helen on {PHONE_A}.</p>
+  <p class="muted" style="margin:0 0 .6rem">This page is for booking our six-week groups. Bookings and payments are handled securely by Gymcatch. Any questions? Text Helen on {PHONE_A}.</p>
+  <p style="margin:0 0 1.4rem"><b>Looking for hot yoga, TRX or another regular class?</b> <a href="timetable.html#book">Book on our class timetable</a>.</p>
   <div class="gc-wrap"><gymcatch-embedded key="{GYMCATCH_KEY}"></gymcatch-embedded></div>
 </div></section>
 <script src="https://gymcatch.com/app/js/bootstrap.js"></script>''')
