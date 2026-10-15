@@ -368,12 +368,22 @@ TEAM = [
   ["I'm a yoga and movement teacher in Stirling, with nearly ten years of teaching behind me and ongoing study in yoga, Pilates, breathwork and modern movement.",
    "My classes weave together fluid movement, mindful strength, breath-led practice and moments of stillness, in a calm and welcoming room. Drawing on both yoga and Pilates, I keep things grounded, accessible and right for your body."],
   "200-hour Hot Yoga (Absolute Yoga Academy), 50-hour Yin (Tribe Academy), Level 3 Diploma in Teaching Yoga (Active IQ), Pregnancy Yoga (50 hours), Kids Yoga, Yoga Trapeze, Yoga Breath Coach, and ongoing STOTT Pilates training"),
+ ("Zoe", "Fierce Grace", "zoe", "Zoe smiling, with dark hair swept back",
+  ["My class is Thursday mornings at 6:30, and I absolutely love teaching it. I'm passionate about movement, both as medicine and as a way to work through everything life brings, together with whole food to nourish and support the body.",
+   "In my twenties I left a stressful job in finance and set off on a long journey back to health, which led me to rock climbing and retraining as an outdoor instructor. In 2016 I went to a pop-up hot yoga class with a group of friends, Helen included, and felt I'd landed right where I was supposed to be. What I love most about Heat is the feeling of community, and I'm inspired every time I walk through the doors."],
+  "Fierce Grace teacher training, London, 2019"),
+ ("Francesca", "Somatic and trauma-informed yoga", "francesca", "Francesca smiling, with curly dark hair",
+  ["I'm a trauma-informed yoga facilitator and somatic therapist, and I specialise in functional yoga practices that support both mind and body. I'm passionate about women's health and wellbeing.",
+   "Alongside teaching yoga, I'm a qualified therapeutic life coach, with an online and in-person practice based in Bridge of Allan. At Heat I bring workshops you won't have tried before, like somatic yoga with props."],
+  "Yin yoga and the Amy Carmody Yoga method, with ongoing training with somatic practitioner Lydia Zamorano"),
+ ("Jack", "", "jack", "Jack smiling outdoors, with sunglasses on his head", ["Bio coming soon."], ""),
+ ("Jules", "", "jules", "Jules standing by the sea", ["Bio coming soon."], "")
 ]
 def team_cards():
     out = ""
     for name, teaches, img, alt, paras, quals in TEAM:
         ps = "".join(f"<p>{p}</p>" for p in paras)
-        out += f'''<article class="card"><img class="card-img portrait" src="assets/img/team/{img}.jpg" alt="{alt}" width="480" height="600" loading="lazy"><span class="for">{teaches}</span><h3>{name}</h3>{ps}<p class="muted" style="font-size:.9rem"><b>Training:</b> {quals}</p></article>'''
+        out += f'''<article class="card"><img class="card-img portrait" src="assets/img/team/{img}.jpg" alt="{alt}" width="480" height="600" loading="lazy">{f'<span class="for">{teaches}</span>' if teaches else ''}<h3>{name}</h3>{ps}{f'<p class="muted" style="font-size:.9rem"><b>Training:</b> {quals}</p>' if quals else ''}</article>'''
     return out
 
 P["meet-the-team.html"] = ("Meet the team: yoga and fitness teachers at Heat Fitness, Stirling",
