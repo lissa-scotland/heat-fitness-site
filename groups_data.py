@@ -19,7 +19,7 @@ G = [
   up=dict(day="Saturday", short="Sat", time="10:45am", length="45 minutes", temp="Warm, not hot", kind="Balance yoga",
    steps=[(5,"Settle","Arrive and breathe"),(15,"Standing balance","Tree, warrior and wall work for posture"),
           (8,"Up and down from the floor","Practised safely, at your pace"),(12,"Hips and back","Long, comfortable stretches"),(5,"Rest","Lying or sitting, whichever is comfier")])),
- dict(name="The Unstiffening", group="Midlife, every gender", label="For stiff backs and desk bodies, of every gender", size="Up to 10",
+ dict(name="The Unstiffening", group="Midlife, every gender", label="For stiff backs and desk bodies, of every gender", size="Up to 8",
   blurb="Two lunchtime fixes for desk backs, with time to shower after",
   line="Lunchtime fixes for desk backs.",
   down=dict(day="Tuesday", short="Tue", time="12:15pm", length="45 minutes", temp="Unheated", kind="Strength",
