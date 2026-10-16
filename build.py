@@ -126,7 +126,7 @@ def six_band(href="six-week-start.html#groups", label="See the groups and how it
   <p>Six weeks, two sessions a week, in a small group of people starting at the same point as you. One session downstairs in the gym and one upstairs in the studio. The groups run in six-week cycles all year: the next runs from {CYCLE_NOW} up to Christmas, and the one after that starts {CYCLE_NEXT}.</p>
   <div class="cta-row"><a class="btn" href="{href}">{label}</a></div></div>
   <div class="price-tag"><span class="big">£50</span><span>for six weeks, about £4 a session</span>
-  <ul><li>Sign-up only, so the group stays the same</li><li>Carry on into the next cycle, or move into any regular class</li><li>15% off your first membership or class pack afterwards</li></ul></div>
+  <ul><li>Booked as a whole six weeks, so the group stays the same</li><li>Carry on into the next cycle, or move into any regular class</li><li>15% off your first membership or class pack afterwards</li></ul></div>
 </div></div></div></section>'''
 SIX_BAND = six_band()
 
