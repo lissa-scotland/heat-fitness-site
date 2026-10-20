@@ -19,7 +19,9 @@ var HEAT = {
   //   video: upload it to YouTube as "Unlisted" and paste the link, e.g. "https://youtu.be/abc123"
   // Anything without a recording shows as "Coming soon".
   resources: [
-    { section: "Breathing", title: "Bedtime breathing", length: "3 minutes", blurb: "Slow, easy breathing to help you wind down and drift off.", audio: "", video: "" },
+    { section: "Breathing", title: "Bedtime breathing", length: "8 minutes", blurb: "Slow, easy breathing to help you wind down at the end of the day. Best listened to in bed, lights off.", audio: "assets/audio/bedtime-breathing.m4a", video: "" },
+    { section: "Breathing", title: "Coherent breathing", length: "6 minutes", blurb: "Breathing in and out at a slow, even pace. A steadying rhythm you can come back to any time of day.", audio: "assets/audio/coherent-breathing.m4a", video: "" },
+    { section: "Breathing", title: "Bliss breathing", length: "4 minutes", blurb: "A short practice to pause, breathe and finish feeling a little lighter.", audio: "assets/audio/bliss-breathing.m4a", video: "" },
     { section: "Breathing", title: "Box breathing for a busy mind", length: "2 minutes", blurb: "Breathe in, hold, breathe out, hold. A simple pattern for when your head won't settle.", audio: "", video: "" },
     { section: "Breathing", title: "Breathe before you begin", length: "2 minutes", blurb: "A short settle to use before a class, a meeting, or anything that makes you nervous.", audio: "", video: "" },
     { section: "Short meditations", title: "Five-minute body scan", length: "5 minutes", blurb: "Lie or sit comfortably and notice each part of your body in turn.", audio: "", video: "" },

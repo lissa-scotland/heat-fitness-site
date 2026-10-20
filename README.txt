@@ -21,6 +21,6 @@ Save, then drag the dist folder onto Netlify's Deploys tab again.
 
 FREE RESOURCES PAGE (breathing, meditations, stretches)
 Open dist/assets/js/site.js and find "resources:" near the top.
-Audio: put the mp3 file in dist/assets/audio/ and type its path next to audio, for example "assets/audio/bedtime-breathing.mp3".
+Audio: put the mp3 or m4a file in assets/audio/ and type its path next to audio, for example "assets/audio/bedtime-breathing.m4a".
 Video: upload it to YouTube as Unlisted and paste the link next to video.
 Anything without a recording shows as "Coming soon". Then drag the dist folder onto Netlify again.
