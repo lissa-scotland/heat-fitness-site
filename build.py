@@ -364,10 +364,6 @@ TEAM = [
   ["I fell in love with yoga nearly 20 years ago, when my doctor told me I needed to change my lifestyle. I tried lots of gym classes, but yoga was the only one I actually enjoyed, and I can't imagine life without it now.",
    "I trained as a teacher in 2019, in Sri Lanka, Bali and Ibiza, so you can probably guess I love to travel. I live in Menstrie with my cockapoo Ava, and when I'm not on the mat or at my desk job, we're up the hills or off on adventures in Sheila the camper van."],
   "Trained in Sri Lanka, Bali and Ibiza since 2019"),
- ("Carly", "Yoga and Pilates", "carly", "Carly smiling, sitting on a mossy log in a forest",
-  ["I'm a yoga and movement teacher in Stirling, with nearly ten years of teaching behind me and ongoing study in yoga, Pilates, breathwork and modern movement.",
-   "My classes weave together fluid movement, mindful strength, breath-led practice and moments of stillness, in a calm and welcoming room. Drawing on both yoga and Pilates, I keep things grounded, accessible and right for your body."],
-  "200-hour Hot Yoga (Absolute Yoga Academy), 50-hour Yin (Tribe Academy), Level 3 Diploma in Teaching Yoga (Active IQ), Pregnancy Yoga (50 hours), Kids Yoga, Yoga Trapeze, Yoga Breath Coach, and ongoing STOTT Pilates training"),
  ("Zoe", "Fierce Grace", "zoe", "Zoe smiling, with dark hair swept back",
   ["My class is Thursday mornings at 6:30, and I absolutely love teaching it. I'm passionate about movement, both as medicine and as a way to work through everything life brings, together with whole food to nourish and support the body.",
    "In my twenties I left a stressful job in finance and set off on a long journey back to health, which led me to rock climbing and retraining as an outdoor instructor. In 2016 I went to a pop-up hot yoga class with a group of friends, Helen included, and felt I'd landed right where I was supposed to be. What I love most about Heat is the feeling of community, and I'm inspired every time I walk through the doors."],
@@ -376,9 +372,25 @@ TEAM = [
   ["I'm a trauma-informed yoga facilitator and somatic therapist, and I specialise in functional yoga practices that support both mind and body. I'm passionate about women's health and wellbeing.",
    "Alongside teaching yoga, I'm a qualified therapeutic life coach, with an online and in-person practice based in Bridge of Allan. At Heat I bring workshops you won't have tried before, like somatic yoga with props."],
   "Yin yoga and the Amy Carmody Yoga method, with ongoing training with somatic practitioner Lydia Zamorano"),
- ("Jack", "", "jack", "Jack smiling outdoors, with sunglasses on his head", ["Bio coming soon."], ""),
- ("Jules", "", "jules", "Jules standing by the sea", ["Bio coming soon."], "")
+ ("Jack", 'Hot 26 &amp; 2, TRX and Strength', "jack", "Jack smiling outdoors, with sunglasses on his head",
+  [
+  "I've been teaching fitness and yoga for over 20 years, and my journey started right where you are: sweating it out in the hot room with Hot 26 &amp; 2. That passion took me to LA for my 500-hour hot yoga training, and I've been lucky enough to teach all over the world, from Australia and Hawaii to Vancouver and here in Scotland.",
+  "Yoga and fitness are lifelong practices I use every day, and I'd love to help you do the same. If you've ever thought “I'm not flexible enough for yoga”, my class is for you. I design my sessions to open up your body, build functional flexibility and help you move more freely, on and off the mat. Come and join me in the hot room."],
+  '500-hour hot yoga teacher training, Los Angeles'),
+ ("Jules", 'Hot Yoga', "jules", 'Jules in a standing yoga pose on a rooftop, with Table Mountain behind her',
+  [
+  "I've been a full-time fitness professional and yoga teacher for 20 years. Fitness and yoga aren't just my career, they're a way of life, and I love nothing more than sharing that with others. My approach is holistic, because real health isn't about one single thing. It's a mix of yoga, fitness, nutrition and overall wellbeing.",
+  'My classes are all about finding your edge in a supportive, encouraging room. If you turn up, I want you to leave feeling it was worth your while, whether you came to build a stronger practice, have a good sweat or completely switch off.'],
+  "")
 ]
+# Teachers away for now. Move an entry back into TEAM to show it again.
+TEAM_AWAY = [
+ ("Carly", "Yoga and Pilates", "carly", "Carly smiling, sitting on a mossy log in a forest",
+  ["I'm a yoga and movement teacher in Stirling, with nearly ten years of teaching behind me and ongoing study in yoga, Pilates, breathwork and modern movement.",
+   "My classes weave together fluid movement, mindful strength, breath-led practice and moments of stillness, in a calm and welcoming room. Drawing on both yoga and Pilates, I keep things grounded, accessible and right for your body."],
+  "200-hour Hot Yoga (Absolute Yoga Academy), 50-hour Yin (Tribe Academy), Level 3 Diploma in Teaching Yoga (Active IQ), Pregnancy Yoga (50 hours), Kids Yoga, Yoga Trapeze, Yoga Breath Coach, and ongoing STOTT Pilates training"),
+]
+
 def team_cards():
     out = ""
     for name, teaches, img, alt, paras, quals in TEAM:
