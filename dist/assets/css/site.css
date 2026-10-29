@@ -316,3 +316,18 @@ gymcatch-embedded {
   --gc-button-border-radius: 999px;
   display: block;
 }
+
+/* Photo slideshow inside a polaroid: images fade one into the next, 5 seconds each */
+.polaroid .slides { position: relative; }
+.polaroid .slides img { display: block; }
+.polaroid .slides img + img { position: absolute; inset: 0; height: 100%; }
+@media (prefers-reduced-motion: no-preference) {
+  .polaroid .slides img { opacity: 0; animation: slide-fade 30s infinite; }
+  .polaroid .slides img:nth-child(2) { animation-delay: 5s; }
+  .polaroid .slides img:nth-child(3) { animation-delay: 10s; }
+  .polaroid .slides img:nth-child(4) { animation-delay: 15s; }
+  .polaroid .slides img:nth-child(5) { animation-delay: 20s; }
+  .polaroid .slides img:nth-child(6) { animation-delay: 25s; }
+}
+@media (prefers-reduced-motion: reduce) { .polaroid .slides img + img { display: none; } }
+@keyframes slide-fade { 0% { opacity: 0; } 3% { opacity: 1; } 17% { opacity: 1; } 20% { opacity: 0; } 100% { opacity: 0; } }
