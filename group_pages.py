@@ -78,7 +78,7 @@ GROUPS = [
         ("Do I have to talk to anyone?", "No. You're welcome to arrive, take part and go home without chatting."),
         ("Do I have to phone?", "No. You can book online, or send Helen a text and she'll reply by text."),
         ("Is this therapy?", "No. It's gentle exercise in a calm setting, and it doesn't replace any support you already have. If you're struggling, please also talk to your GP.")]),
- dict(name="Steady and Strong", when="Mondays and Wednesdays, 10am", slug="over-60s-exercise-classes-stirling.html", photo=("gym-corridor.jpg", "The gym downstairs, with plenty of wall to hold on to"),
+ dict(name="Steady and Strong", when="Mondays at 10am and Wednesdays at 11am", slug="over-60s-exercise-classes-stirling.html", photo=("gym-corridor.jpg", "The gym downstairs, with plenty of wall to hold on to"),
   title="Exercise classes for over-60s in Stirling: strength, balance and gentle yoga | Heat Fitness",
   desc="Daytime strength and balance classes for over-60s in Stirling, with the wall to hold on to and a cup of tea afterwards. Unheated and beginner friendly.",
   kicker="Six-week group for over-60s", h1a="Daytime, no heat,", h1b="and a cuppa after.",
