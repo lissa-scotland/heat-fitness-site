@@ -24,3 +24,8 @@ Open dist/assets/js/site.js and find "resources:" near the top.
 Audio: put the mp3 or m4a file in assets/audio/ and type its path next to audio, for example "assets/audio/bedtime-breathing.m4a".
 Video: upload it to YouTube as Unlisted and paste the link next to video.
 Anything without a recording shows as "Coming soon". Then drag the dist folder onto Netlify again.
+
+MENOPAUSE WORKSHOP PAGE (added 29 Oct 2026)
+dist/menopause-workshop-stirling.html was made by hand (not by build.py), with a link card on classes.html,
+perimenopause-exercise-stirling.html and menopause-strength-classes-stirling.html, and an entry in sitemap.xml.
+If you rebuild with build.py, add those link cards back. Booking is by text/phone until the workshop is in Gymcatch.
