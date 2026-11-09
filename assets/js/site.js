@@ -1,7 +1,6 @@
 /* Heat Fitness site settings. Change these in one place. */
 var HEAT = {
-  // Where every "Book" button goes. The live Mindbody timetable sits on the Timetable page.
-  // When the studio moves from Mindbody (contract ends 14 April 2027), swap the widget code on that page.
+  // Where every "Book" button goes. The live Gymcatch timetable sits on the Timetable page.
   bookingUrl: "timetable.html#book",
   // Latest News: paste the JSON feed link from Behold (behold.so) here once Helen connects her Instagram.
   // Until then, the news section shows the posts listed under "news" below.
@@ -42,7 +41,7 @@ var HEAT = {
   // floor: "down" (the gym) or "up" (the studio). heat: "unheated", "warm" or "hot".
   timetable: [
     { day: "Monday",     time: "10am",     name: "Steady and Strong",  floor: "down", heat: "unheated" },
-    { day: "Wednesday",  time: "10am",     name: "Steady and Strong",  floor: "up",   heat: "unheated" },
+    { day: "Wednesday",  time: "11am",     name: "Steady and Strong",  floor: "up",   heat: "unheated" },
     { day: "Tuesday",    time: "12:15pm",  name: "The Unstiffening",   floor: "down", heat: "unheated" },
     { day: "Thursday",   time: "12:15pm",  name: "The Unstiffening",   floor: "up",   heat: "warm" },
     { day: "Monday",     time: "7:30pm",   name: "The Quiet Hour",     floor: "down", heat: "unheated" },

@@ -259,12 +259,12 @@ P["timetable.html"] = ("Class timetable and booking | Heat Fitness, Stirling",
   <p class="lead">Every class this week, with live spaces. Pick a day, then tap Book. New here? <a href="start-here.html">Here's what to expect</a>.</p>
 </div></section>
 <section class="section" id="book"><div class="wrap"><div class="booking">
-  <div class="mindbody-widget" data-widget-type="Schedules" data-widget-id="d6713468a54"></div>
-  <p class="booking-fallback muted">If the timetable doesn't appear, <a href="https://go.mindbodyonline.com/book/widgets/schedules/view/d6713468a54/schedule" target="_blank" rel="noopener">open it in a new tab</a>.</p>
+  <div class="gc-wrap"><gymcatch-embedded key="02209605-f131-4d9f-b7ad-b6665aab4e67"></gymcatch-embedded></div>
+  <p class="booking-fallback muted">Bookings and payments are handled securely by Gymcatch. You can also book in the Gymcatch app: search for Heat Fitness.</p>
 </div></div></section>
 <section class="section"><div class="wrap"><div class="sec-head"><span class="kicker">Six-week groups</span><h2 class="display">Our six-week groups</h2><p class="measure">These are booked as a whole six weeks, so <a href="six-week-start.html#groups">pick your group and book here</a> rather than booking above.</p></div><div class="days" id="timetable"></div></div></section>
 <section class="section"><div class="wrap"><div class="card"><h3>Still being finalised</h3><ul class="ticks" id="pending"></ul></div></div></section>
-<script src="https://brandedweb.mindbodyonline.com/embed/widget.js" async></script>''')
+<script src="https://gymcatch.com/app/js/bootstrap.js"></script>''')
 
 P["prices.html"] = ("Prices and passes | Heat Fitness, Stirling",
  "The six-week start for £50, plus drop-ins, class passes and monthly passes at Heat Fitness in Stirling. No contracts. 20% off for students, over-65s, NHS staff and people on Universal Credit.",
@@ -283,12 +283,13 @@ P["prices.html"] = ("Prices and passes | Heat Fitness, Stirling",
     <tr><td>Hot yoga, 90 minutes</td><td class="num">£15</td></tr><tr><td>Yin</td><td class="num">£12</td></tr>
     <tr><td>Hot core, or weights and cardio<br><span class="muted">When they're on the timetable</span></td><td class="num">£13</td></tr><tr><td>TRX</td><td class="num">£8</td></tr></tbody></table></div></div>
   <div><h3>Monthly passes</h3><div class="table-wrap"><table><thead><tr><th>Pass</th><th style="text-align:right">Per month</th></tr></thead><tbody>
-    <tr><td>Yoga<br><span class="muted">Yoga, hot core, weights and cardio</span></td><td class="num">£65</td></tr>
-    <tr><td>Yoga and TRX<br><span class="muted">Everything, including TRX</span></td><td class="num">£75</td></tr>
-    <tr><td>Family yoga<br><span class="muted">For couples or two people in the same family</span></td><td class="num">£110</td></tr>
-    <tr><td>Family yoga and TRX</td><td class="num">£125</td></tr></tbody></table></div></div>
+    <tr><td>Monthly Yoga<br><span class="muted">Unlimited yoga classes</span></td><td class="num">£65</td></tr>
+    <tr><td>Monthly Yoga plus mat storage<br><span class="muted">Unlimited yoga, and keep your own mat at the studio</span></td><td class="num">£72</td></tr>
+    <tr><td>Full Access<br><span class="muted">Every class, including TRX</span></td><td class="num">£85</td></tr>
+    <tr><td>Family Yoga<br><span class="muted">Unlimited yoga for two people in the same household</span></td><td class="num">£110</td></tr>
+    <tr><td>Family Full Access<br><span class="muted">Every class for two people in the same household</span></td><td class="num">£130</td></tr></tbody></table></div></div>
   <div><h3>Class passes</h3><div class="table-wrap"><table><thead><tr><th>Pass</th><th style="text-align:right">Price</th></tr></thead><tbody>
-    <tr><td>Yoga, 5 classes<br><span class="muted">Use within 4 months</span></td><td class="num">£60</td></tr>
+    <tr><td>Yoga, 5 classes<br><span class="muted">Use within 3 months</span></td><td class="num">£60</td></tr>
     <tr><td>Yoga, 10 classes<br><span class="muted">Use within 6 months</span></td><td class="num">£115</td></tr>
     <tr><td>TRX, 5 classes</td><td class="num">£36</td></tr><tr><td>TRX, 10 classes</td><td class="num">£70</td></tr></tbody></table></div></div>
   <div class="stack"><h3>Good to know</h3>
@@ -438,9 +439,8 @@ GYMCATCH_KEY = "02209605-f131-4d9f-b7ad-b6665aab4e67"
 P["book.html"] = ("Book online | Heat Fitness, Stirling", "Book and pay for Heat Fitness six-week groups online.",
  f'''<section class="section book-page"><div class="wrap">
   <span class="kicker">Book online</span><h1 class="display" style="font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 .6rem">Book your place</h1>
-  <p class="muted" style="margin:0 0 .6rem">This page is for booking our six-week groups. Bookings and payments are handled securely by Gymcatch. Any questions? Text Helen on {PHONE_A}.</p>
-  <p style="margin:0 0 1.4rem"><b>Looking for hot yoga, TRX or another regular class?</b> <a href="timetable.html#book">Book on our class timetable</a>.</p>
-  <div class="gc-wrap"><gymcatch-embedded key="{GYMCATCH_KEY}"></gymcatch-embedded></div>
+  <p class="muted" style="margin:0 0 .6rem">Book any class, six-week group or pass here. Bookings and payments are handled securely by Gymcatch. Any questions? Text Helen on {PHONE_A}.</p>
+    <div class="gc-wrap"><gymcatch-embedded key="{GYMCATCH_KEY}"></gymcatch-embedded></div>
 </div></section>
 <script src="https://gymcatch.com/app/js/bootstrap.js"></script>''')
 
