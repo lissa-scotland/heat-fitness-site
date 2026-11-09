@@ -331,3 +331,16 @@ gymcatch-embedded {
 }
 @media (prefers-reduced-motion: reduce) { .polaroid .slides img + img { display: none; } }
 @keyframes slide-fade { 0% { opacity: 0; } 3% { opacity: 1; } 17% { opacity: 1; } 20% { opacity: 0; } 100% { opacity: 0; } }
+
+/* WhatsApp chat button, bottom right on every page */
+.wa-float {
+  position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 50; display: inline-flex; align-items: center; gap: .5rem;
+  background: #25D366; color: #0B2E1A; font-family: var(--body); font-weight: 700; font-size: .95rem;
+  text-decoration: none; padding: .7rem 1rem; border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+.wa-float:hover, .wa-float:focus-visible { background: #1EBE5A; color: #0B2E1A; }
+.wa-float:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+@media (max-width: 520px) { .wa-float span { display: none; } .wa-float { padding: .8rem; } }
+@media print { .wa-float { display: none; } }

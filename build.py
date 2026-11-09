@@ -51,7 +51,7 @@ def header(cur):
 FOOTER = f'''<footer class="site-foot"><div class="wrap">
   <div class="foot-grid">
     <div><h2>Find us</h2><p>{ADDR}<br>{POSTCODE}</p><p style="margin-top:8px"><b>Opening hours</b><br>{HOURS_HTML}</p></div>
-    <div><h2>Talk to Helen</h2><ul><li>Text or call {PHONE_A}</li><li><a href="mailto:helen@heatfitness.co.uk">helen@heatfitness.co.uk</a></li></ul></div>
+    <div><h2>Talk to Helen</h2><ul><li>Text or call {PHONE_A}</li><li><a href="https://wa.me/447344038658" target="_blank" rel="noopener">WhatsApp 07344 038658</a></li><li><a href="mailto:helen@heatfitness.co.uk">helen@heatfitness.co.uk</a></li></ul></div>
     <div><h2>Pages</h2><ul><li><a href="classes.html">Classes</a></li><li><a href="timetable.html">Timetable</a></li><li><a href="prices.html">Prices</a></li><li><a href="start-here.html">New here?</a></li><li><a href="resources.html">Free resources</a></li></ul></div>
     <div><h2>Classes</h2><ul><li><a href="classes.html#hot">Hot yoga</a></li><li><a href="classes.html#warm">Warm and unheated yoga</a></li><li><a href="classes.html#strength">TRX and the gym</a></li><li><a href="one-to-one.html">Personal training</a></li><li><a href="classes.html#groups">Six-week groups</a></li></ul></div>
     <div><h2>Follow us</h2><ul><li><a href="https://www.facebook.com/HeatFitnessScotland">Facebook</a></li><li><a href="https://www.instagram.com/heatfitnessscotland">Instagram</a></li></ul></div>
@@ -418,6 +418,7 @@ P["contact.html"] = ("Contact and directions | Heat Fitness, Stirling",
 <section class="section"><div class="wrap split" style="align-items:start">
   <dl class="info-list">
     <div><dt>Text or call Helen</dt><dd>{PHONE_A}</dd></div>
+    <div><dt>WhatsApp</dt><dd><a href="https://wa.me/447344038658" target="_blank" rel="noopener">07344 038658</a></dd></div>
     <div><dt>Email</dt><dd><a href="mailto:helen@heatfitness.co.uk">helen@heatfitness.co.uk</a></dd></div>
     <div><dt>Address</dt><dd>{ADDR}<br>{POSTCODE}</dd></div>
     <div><dt>Opening hours</dt><dd>{HOURS_HTML}</dd></div>
