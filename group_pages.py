@@ -90,7 +90,7 @@ GROUPS = [
        "You've had a fall, or you worry about having one. We practise balance next to the wall and show you how to get up from the floor safely"],
   faqs=[("I haven't exercised for years. Is that okay?", "Yes. Most people who join haven't, and Helen starts everyone gently."),
         ("Is it heated?", "No. Both sessions are unheated."),
-        ("How much is it?", "£50 for six weeks, which is twelve sessions at about £4 each, with tea included. Over-65s get 20% off passes after that. See the prices page for details.")]),
+        ("How much is it?", "£50 for six weeks, which is twelve sessions at about £4 each, with tea included. Over-60s get 20% off passes after that. See the prices page for details.")]),
 ]
 
 def when(name):

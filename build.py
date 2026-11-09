@@ -267,7 +267,7 @@ P["timetable.html"] = ("Class timetable and booking | Heat Fitness, Stirling",
 <script src="https://gymcatch.com/app/js/bootstrap.js"></script>''')
 
 P["prices.html"] = ("Prices and passes | Heat Fitness, Stirling",
- "The six-week start for £50, plus drop-ins, class passes and monthly passes at Heat Fitness in Stirling. No contracts. 20% off for students, over-65s, NHS staff and people on Universal Credit.",
+ "The six-week start for £50, plus drop-ins, class passes and monthly passes at Heat Fitness in Stirling. No contracts. 20% off for over-60s, students, Blue Light and Defence Discount cardholders, and people on Universal Credit.",
  f'''<section class="hero"><div class="wrap">
   <span class="kicker">Prices</span><h1 class="display" style="margin-top:.6rem;font-size:clamp(2.4rem,6vw,4.4rem)">Prices<span class="hand" style="display:block;text-transform:none">and no contracts.</span></h1>{UNDERLINE}
   <p class="lead">Start small and only commit once you know you like it.</p>
@@ -284,6 +284,7 @@ P["prices.html"] = ("Prices and passes | Heat Fitness, Stirling",
     <tr><td>Hot core, or weights and cardio<br><span class="muted">When they're on the timetable</span></td><td class="num">£13</td></tr><tr><td>TRX</td><td class="num">£8</td></tr></tbody></table></div></div>
   <div><h3>Monthly passes</h3><div class="table-wrap"><table><thead><tr><th>Pass</th><th style="text-align:right">Per month</th></tr></thead><tbody>
     <tr><td>Monthly Yoga<br><span class="muted">Unlimited yoga classes</span></td><td class="num">£65</td></tr>
+    <tr><td>Monthly Gym Only<br><span class="muted">Unlimited TRX and strength classes</span></td><td class="num">£35</td></tr>
     <tr><td>Monthly Yoga plus mat storage<br><span class="muted">Unlimited yoga, and keep your own mat at the studio</span></td><td class="num">£72</td></tr>
     <tr><td>Full Access<br><span class="muted">Every class, including TRX</span></td><td class="num">£85</td></tr>
     <tr><td>Family Yoga<br><span class="muted">Unlimited yoga for two people in the same household</span></td><td class="num">£110</td></tr>
@@ -291,9 +292,9 @@ P["prices.html"] = ("Prices and passes | Heat Fitness, Stirling",
   <div><h3>Class passes</h3><div class="table-wrap"><table><thead><tr><th>Pass</th><th style="text-align:right">Price</th></tr></thead><tbody>
     <tr><td>Yoga, 5 classes<br><span class="muted">Use within 3 months</span></td><td class="num">£60</td></tr>
     <tr><td>Yoga, 10 classes<br><span class="muted">Use within 6 months</span></td><td class="num">£115</td></tr>
-    <tr><td>TRX, 5 classes</td><td class="num">£36</td></tr><tr><td>TRX, 10 classes</td><td class="num">£70</td></tr></tbody></table></div></div>
+    <tr><td>TRX, 5 classes<br><span class="muted">Use within 3 months</span></td><td class="num">£36</td></tr><tr><td>TRX, 10 classes<br><span class="muted">Use within 6 months</span></td><td class="num">£70</td></tr></tbody></table></div></div>
   <div class="stack"><h3>Good to know</h3>
-    <ul class="ticks"><li>20% off everything except intro offers for students, over-65s on a full pension, NHS staff and people on Universal Credit</li>
+    <ul class="ticks"><li>20% off classes, class passes and monthly passes (not the intro offer) for over-60s, students, Blue Light and Defence Discount cardholders, and people on Universal Credit. Use the code when you book: OVER60S20, STUDENT20, BLUELIGHT20 or UC20. Please bring your card to show us.</li>
     <li><a href="one-to-one.html">One-to-one sessions</a> in the gym or on the mat, from £40 per person</li>
     <li>New here? Try 10 days of unlimited classes for £20</li></ul>
     <div class="cta-row"><a class="btn" data-book href="timetable.html#book">Book a class</a><a class="btn ghost" href="contact.html">Ask about passes</a></div></div>
